@@ -88,14 +88,19 @@ Options:
 Examples:
 
 
-> tempfile:name("prefix_").
-"/tmp/prefix_ZL7YmS5HRQodKpOfEAaO.tmp"
-> tempfile:name("prefix_", [{ext, "toto"}]).
-"/tmp/prefix_RbmrP0wsde4NNwhBzzer.toto"
-> tempfile:name("prefix_", [{ext, ".toto"}]).
-"/tmp/prefix_0OSbH34VQlLbVtbSHFtj.toto"
-> tempfile:name("prefix_", [{ext, ".toto"}, {path, "."}]).
-"./prefix_Sa7BFnEzS6h862jmXQdy.toto"
+
+```erlang
+
+ 1> tempfile:name("prefix_").
+ "/tmp/prefix_ZL7YmS5HRQodKpOfEAaO.tmp"
+ 2> tempfile:name("prefix_", [{ext, "toto"}]).
+ "/tmp/prefix_RbmrP0wsde4NNwhBzzer.toto"
+ 3> tempfile:name("prefix_", [{ext, ".toto"}]).
+ "/tmp/prefix_0OSbH34VQlLbVtbSHFtj.toto"
+ 4> tempfile:name("prefix_", [{ext, ".toto"}, {path, "."}]).
+ "./prefix_Sa7BFnEzS6h862jmXQdy.toto"
+```
+
 <a name="os_tmp_dir-0"></a>
 
 ### os_tmp_dir/0 ###
