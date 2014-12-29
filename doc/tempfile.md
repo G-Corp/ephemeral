@@ -105,7 +105,11 @@ Examples:
 
 ### os_tmp_dir/0 ###
 
-`os_tmp_dir() -> any()`
+
+<pre><code>
+os_tmp_dir() -&gt; string() | false
+</code></pre>
+<br />
 
 
  

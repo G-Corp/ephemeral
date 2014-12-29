@@ -64,6 +64,7 @@ name(Prefix, Options) ->
 %
 % Returns <code>false</code> if none of the above are writable
 % @end
+-spec os_tmp_dir() -> string() | false.
 os_tmp_dir() ->
   case os:getenv("TMPDIR") of
     false -> 
