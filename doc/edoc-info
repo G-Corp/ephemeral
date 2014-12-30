@@ -1,4 +1,4 @@
 %% encoding: UTF-8
 {application,tempfile}.
 {packages,[]}.
-{modules,[tempfile]}.
+{modules,[ostemp,tempdir,tempfile]}.

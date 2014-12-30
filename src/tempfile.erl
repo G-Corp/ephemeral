@@ -5,11 +5,8 @@
 %% Erlang module for managing temporary files
 %% @end
 -module(tempfile).
--include_lib("kernel/include/file.hrl").
--define(CHARS, "azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN1234567890").
 
 -export([
-         os_tmp_dir/0,
          name/1,
          name/2
         ]).
@@ -26,7 +23,7 @@ name(Prefix) ->
 % Options:
 %
 % * <code>ext</code> : temp file extension (default: <code>.tmp</code>)
-% * <code>path</code> : temp file path (default: <code>os_tmp_dir()</code>)
+% * <code>path</code> : temp file path (default: <code>ostemp:dir()</code>)
 %
 % Examples:
 %
@@ -48,57 +45,6 @@ name(Prefix, Options) ->
           [$.|_] = Ext1 -> Ext1;
           Ext2 -> [$.|Ext2]
         end,
-  Path = maps:get(path, Options1, os_tmp_dir()),
-  filename:join([Path, Prefix ++ randstr(20) ++ Ext]).
+  Path = maps:get(path, Options1, ostemp:dir()),
+  filename:join([Path, Prefix ++ temp_utils:randstr(20) ++ Ext]).
 
-% @doc
-% Returns a writable temporary directory. 
-%
-% Searches for directories in the following order:
-%
-% 1. the directory named by the <code>TMPDIR</code> environment variable 
-% 2. the directory named by the <code>TEMP</code> environment variable 
-% 3. the directory named by the <code>TMP</code> environment variable 
-% 4. <code>C:\TMP</code> on Windows or <code>/tmp</code> on Unix 
-% 5. as a last resort, the current working directory
-%
-% Returns <code>false</code> if none of the above are writable
-% @end
--spec os_tmp_dir() -> string() | false.
-os_tmp_dir() ->
-  case os:getenv("TMPDIR") of
-    false -> 
-      case os:getenv("TEMP") of
-        false -> 
-          case os:getenv("TMP") of
-            false -> 
-              case write_tmp_dir("/tmp") of
-                false -> 
-                  Cwd = case file:get_cwd() of
-                          {ok, Dir} -> Dir;
-                          _ -> "."
-                        end,
-                  case write_tmp_dir(Cwd) of
-                    false -> false;
-                    LTmp -> LTmp
-                  end;
-                STmp -> STmp
-              end;
-            Tmp -> Tmp
-          end;
-        Temp -> Temp
-      end;
-    Tmpdir -> Tmpdir
-  end.
-
-% Private
-
-randstr(Size) ->
-  [lists:sublist(?CHARS, random:uniform(length(?CHARS)), 1) || _ <- lists:seq(1, Size)].
-
-write_tmp_dir(Path) ->
-  case file:read_file_info(Path) of
-    {ok, #file_info{type = directory, access = Access}} when Access =:= read_write; Access =:= write ->
-      Path;
-    _ -> false
-  end.

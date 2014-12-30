@@ -45,8 +45,7 @@ tmpname_options() = [<a href="#type-tmpname_option">tmpname_option()</a>]
 
 
 <table width="100%" border="1" cellspacing="0" cellpadding="2" summary="function index"><tr><td valign="top"><a href="#name-1">name/1</a></td><td>Equivalent to <a href="#name-2"><tt>name(Prefix, [])</tt></a>.</td></tr><tr><td valign="top"><a href="#name-2">name/2</a></td><td> 
-Get a temporary file name.</td></tr><tr><td valign="top"><a href="#os_tmp_dir-0">os_tmp_dir/0</a></td><td> 
-Returns a writable temporary directory.</td></tr></table>
+Get a temporary file name.</td></tr></table>
 
 
 <a name="functions"></a>
@@ -81,7 +80,7 @@ Options:
 
 
 * `ext` : temp file extension (default: `.tmp`)
-* `path` : temp file path (default: `os_tmp_dir()`)
+* `path` : temp file path (default: `ostemp:dir()`)
 
 
 
@@ -101,31 +100,3 @@ Examples:
  "./prefix_Sa7BFnEzS6h862jmXQdy.toto"
 ```
 
-<a name="os_tmp_dir-0"></a>
-
-### os_tmp_dir/0 ###
-
-
-<pre><code>
-os_tmp_dir() -&gt; string() | false
-</code></pre>
-<br />
-
-
- 
-Returns a writable temporary directory.
-
-
-
-Searches for directories in the following order:
-
-
-
-1. the directory named by the `TMPDIR` environment variable
-2. the directory named by the `TEMP` environment variable
-3. the directory named by the `TMP` environment variable
-4. `C:\TMP` on Windows or `/tmp` on Unix 
-5. as a last resort, the current working directory
-
-
-Returns `false` if none of the above are writable
