@@ -5,8 +5,6 @@
 %% Erlang module for managing temporary files
 %% @end
 -module(tempdir).
--include_lib("kernel/include/file.hrl").
--define(CHARS, "azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN1234567890").
 
 -export([
          name/0,
@@ -51,7 +49,7 @@ mktmp(Fun) ->
 mktmp(Options, Fun) when is_list(Options), is_function(Fun, 1) ->
   Dir = name(Options),
   case efile:make_dir(Dir) of
-    ok -> 
+    ok ->
       Result = Fun(Dir),
       _ = case elists:keyfind(remove, 1, Options, true) of
           true -> efile:remove_recursive(Dir);
