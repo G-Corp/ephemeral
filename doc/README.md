@@ -23,7 +23,6 @@ __Authors:__ Gregoire Lejeune ([`gregoire.lejeune@finexkap.com`](mailto:gregoire
 kafe is available for use under the following license, commonly known as the 3-clause (or "modified") BSD license:
 
 Copyright (c) 2014, 2015 Finexkap<br />
-Copyright (c) 2015, G-Corp<br />
 Copyright (c) 2015, Bots Unit<br />
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
