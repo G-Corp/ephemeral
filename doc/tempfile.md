@@ -21,7 +21,6 @@ __Authors:__ Gregoire Lejeune ([`gl@finexkap.com`](mailto:gl@finexkap.com)).
 ### <a name="type-tmpname_option">tmpname_option()</a> ###
 
 
-
 <pre><code>
 tmpname_option() = {ext, string()} | {path, string()}
 </code></pre>
@@ -29,15 +28,12 @@ tmpname_option() = {ext, string()} | {path, string()}
 
 
 
-
 ### <a name="type-tmpname_options">tmpname_options()</a> ###
-
 
 
 <pre><code>
 tmpname_options() = [<a href="#type-tmpname_option">tmpname_option()</a>]
 </code></pre>
-
 
 <a name="index"></a>
 
@@ -59,10 +55,10 @@ Get a temporary file name.</td></tr></table>
 `name(Prefix) -> any()`
 
 Equivalent to [`name(Prefix, [])`](#name-2).
+
 <a name="name-2"></a>
 
 ### name/2 ###
-
 
 <pre><code>
 name(Prefix::string(), Options::<a href="#type-tmpname_options">tmpname_options()</a>) -&gt; string()
@@ -70,23 +66,14 @@ name(Prefix::string(), Options::<a href="#type-tmpname_options">tmpname_options(
 <br />
 
 
- 
 Get a temporary file name
 
-
-
 Options:
-
-
 
 * `ext` : temp file extension (default: `.tmp`)
 * `path` : temp file path (default: `ostemp:dir()`)
 
-
-
 Examples:
-
-
 
 ```erlang
 

@@ -11,3 +11,5 @@ erl_crash.dump
 .eunit
 .rebar
 ext
+.erlang.mk
+tempfile.d

@@ -1,39 +1,19 @@
-REBAR = ./rebar
+PROJECT = tempfile
 
-.PHONY: compile get-deps test doc
+DEPS = edown eutils
+dep_edown = git https://github.com/botsunit/edown.git master
+dep_eutils = git https://github.com/emedia-project/eutils.git master
 
-all: compile doc
+include erlang.mk
 
-compile: get-deps
-	@$(REBAR) compile
+EDOC_OPTS = {doclet, edown_doclet} \
+						, {app_default, "http://www.erlang.org/doc/man"} \
+						, {source_path, ["src"]} \
+						, {overview, "overview.edoc"} \
+						, {stylesheet, ""} \
+						, {image, ""} \
+						, {top_level_readme, {"./README.md", "https://github.com/botsunit/tempfile"}} 
 
-get-deps:
-	@$(REBAR) get-deps
-	@$(REBAR) check-deps
-
-clean:
-	@$(REBAR) clean
-	rm -f erl_crash.dump
-
-realclean: clean
-	@$(REBAR) delete-deps
-
-test: compile
-	@$(REBAR) skip_deps=true eunit
-
-doc:
-	@rm -f documentation.md
-	@rm -rf doc
-	@./make_doc
-
-dev:
+dev: deps app
 	@erl -pa ebin include deps/*/ebin deps/*/include
 
-analyze: checkplt
-	@$(REBAR) skip_deps=true dialyze
-
-buildplt:
-	@$(REBAR) skip_deps=true build-plt
-
-checkplt: buildplt
-	@$(REBAR) skip_deps=true check-plt

@@ -21,7 +21,6 @@ __Authors:__ Gregoire Lejeune ([`gl@finexkap.com`](mailto:gl@finexkap.com)).
 ### <a name="type-tmpname_option">tmpname_option()</a> ###
 
 
-
 <pre><code>
 tmpname_option() = {prefix, string()} | {path, string()}
 </code></pre>
@@ -29,15 +28,12 @@ tmpname_option() = {prefix, string()} | {path, string()}
 
 
 
-
 ### <a name="type-tmpname_options">tmpname_options()</a> ###
-
 
 
 <pre><code>
 tmpname_options() = [<a href="#type-tmpname_option">tmpname_option()</a>]
 </code></pre>
-
 
 <a name="index"></a>
 
@@ -60,6 +56,7 @@ Get a temporary dir name.</td></tr></table>
 `mktmp(Fun) -> any()`
 
 Equivalent to [`mktmp([], Fun)`](#mktmp-2).
+
 <a name="mktmp-2"></a>
 
 ### mktmp/2 ###
@@ -67,17 +64,14 @@ Equivalent to [`mktmp([], Fun)`](#mktmp-2).
 `mktmp(Options, Fun) -> any()`
 
 
- 
 Create a temporary directory
 
-
-
 Options:
-
 
 * `prefix` : temporary directory prefix (default: `tmp_`
 * `path` : temp file path (default: `ostemp:dir()`)
 * `remove` : remove the temp dir (default: `true`)
+
 <a name="name-0"></a>
 
 ### name/0 ###
@@ -85,10 +79,10 @@ Options:
 `name() -> any()`
 
 Equivalent to [`name([])`](#name-1).
+
 <a name="name-1"></a>
 
 ### name/1 ###
-
 
 <pre><code>
 name(Options::<a href="#type-tmpname_options">tmpname_options()</a>) -&gt; string()
@@ -96,13 +90,10 @@ name(Options::<a href="#type-tmpname_options">tmpname_options()</a>) -&gt; strin
 <br />
 
 
- 
 Get a temporary dir name
-
-
 
 Options:
 
-
 * `prefix` : temporary directory prefix (default: `tmp_`
 * `path` : temp file path (default: `ostemp:dir()`)
+

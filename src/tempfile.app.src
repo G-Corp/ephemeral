@@ -3,6 +3,7 @@
   {description, ""},
   {vsn, "1.0.1-pre"},
   {registered, []},
+  {modules, []},
   {applications, [
                   kernel,
                   stdlib

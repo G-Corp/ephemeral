@@ -9,6 +9,7 @@ Copyright (c) 2014 Finexkap
 Erlang module for managing temporary files
 
 __Authors:__ Gregoire Lejeune ([`gl@finexkap.com`](mailto:gl@finexkap.com)).
+
 <a name="index"></a>
 
 ## Function Index ##
@@ -26,21 +27,15 @@ Returns a writable temporary directory.</td></tr></table>
 
 ### dir/0 ###
 
-
 <pre><code>
 dir() -&gt; string() | false
 </code></pre>
 <br />
 
 
- 
 Returns a writable temporary directory.
 
-
-
 Searches for directories in the following order:
-
-
 
 1. the directory named by the `TMPDIR` environment variable
 2. the directory named by the `TEMP` environment variable
@@ -48,5 +43,5 @@ Searches for directories in the following order:
 4. `C:\TMP` on Windows or `/tmp` on Unix 
 5. as a last resort, the current working directory
 
-
 Returns `false` if none of the above are writable
+
