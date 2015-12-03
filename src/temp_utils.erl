@@ -7,5 +7,6 @@
         ]).
 
 randstr(Size) ->
+  random:seed(erlang:system_time(milli_seconds)),
   [lists:sublist(?CHARS, random:uniform(length(?CHARS)), 1) || _ <- lists:seq(1, Size)].
 
