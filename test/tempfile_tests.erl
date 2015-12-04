@@ -25,7 +25,6 @@ t_name() ->
 build_sample(0) ->
   [];
 build_sample(N) ->
-  timer:sleep(5), % bof bof…
   [tempfile:name("whatever_equal_")|build_sample(N-1)].
 
 all_are_different([]) ->
