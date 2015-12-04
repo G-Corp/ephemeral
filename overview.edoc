@@ -1,5 +1,7 @@
 @author Gregoire Lejeune <gregoire.lejeune@finexkap.com>
 @author Gregoire Lejeune <gregoire.lejeune@botsunit.com>
+@author Mathias Franck <mathias.franck@botsunit.com>
+
 @copyright 2014, 2015 Finexkap, 2015 Bots Unit
 @title Erlang module for managing temporary files
 @doc
