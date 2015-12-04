@@ -48,13 +48,13 @@ mktmp(Fun) ->
 % @end
 mktmp(Options, Fun) when is_list(Options), is_function(Fun, 1) ->
   Dir = name(Options),
-  case efile:make_dir(Dir) of
+  case bucfile:make_dir(Dir) of
     ok ->
       Result = Fun(Dir),
-      _ = case elists:keyfind(remove, 1, Options, true) of
-          true -> efile:remove_recursive(Dir);
-          _ -> ok
-        end,
+      _ = case buclists:keyfind(remove, 1, Options, true) of
+            true -> bucfile:remove_recursive(Dir);
+            _ -> ok
+          end,
       Result;
     E -> E
   end.
