@@ -4,7 +4,7 @@
 
 Copyright (c) 2014, 2015 Finexkap, 2015 Bots Unit
 
-__Authors:__ Gregoire Lejeune ([`gregoire.lejeune@finexkap.com`](mailto:gregoire.lejeune@finexkap.com)), Gregoire Lejeune ([`gregoire.lejeune@botsunit.com`](mailto:gregoire.lejeune@botsunit.com)).
+__Authors:__ Gregoire Lejeune ([`gregoire.lejeune@finexkap.com`](mailto:gregoire.lejeune@finexkap.com)), Gregoire Lejeune ([`gregoire.lejeune@botsunit.com`](mailto:gregoire.lejeune@botsunit.com)), Mathias Franck ([`mathias.franck@botsunit.com`](mailto:mathias.franck@botsunit.com)).
 
 
 ### Contributing ###
