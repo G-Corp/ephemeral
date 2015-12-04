@@ -8,5 +8,6 @@
                   kernel,
                   stdlib
                  ]},
-  {env, []}
+  {env, []},
+  {mod, {tempfile_app, []}}
  ]}.
