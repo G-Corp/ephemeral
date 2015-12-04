@@ -38,7 +38,8 @@ THIS SOFTWARE IS PROVIDED BY THE AUTHOR `AS IS` AND ANY EXPRESS OR IMPLIED WARRA
 
 
 <table width="100%" border="0" summary="list of modules">
-<tr><td><a href="https://github.com/botsunit/tempfile/blob/master/doc/ostemp.md" class="module">ostemp</a></td></tr>
-<tr><td><a href="https://github.com/botsunit/tempfile/blob/master/doc/tempdir.md" class="module">tempdir</a></td></tr>
-<tr><td><a href="https://github.com/botsunit/tempfile/blob/master/doc/tempfile.md" class="module">tempfile</a></td></tr></table>
+<tr><td><a href="https://github.com/botsunit/tempfile/blob/correc_randseed/doc/ostemp.md" class="module">ostemp</a></td></tr>
+<tr><td><a href="https://github.com/botsunit/tempfile/blob/correc_randseed/doc/tempdir.md" class="module">tempdir</a></td></tr>
+<tr><td><a href="https://github.com/botsunit/tempfile/blob/correc_randseed/doc/tempfile.md" class="module">tempfile</a></td></tr>
+<tr><td><a href="https://github.com/botsunit/tempfile/blob/correc_randseed/doc/tempfile_app.md" class="module">tempfile_app</a></td></tr></table>
 
