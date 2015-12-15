@@ -13,7 +13,7 @@
 
 start(_Type, _Args) ->
   _ = random:seed(erlang:system_time(micro_seconds)),
-  ok.
+  {ok,self()}.
 
 stop(_State) ->
   ok.
