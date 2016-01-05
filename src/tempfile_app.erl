@@ -1,10 +1,4 @@
-% @doc
-% tempfile should have been started before using functions that generate
-% random strings (the ones using temp_utils:randstr/1), as initialization
-% reset the random generator seed, in order to guarantee a good distribution
-% of random strings.
-% @end
-
+% @hidden
 -module(tempfile_app).
 -behaviour(application).
 
@@ -12,8 +6,7 @@
 -export([stop/1]).
 
 start(_Type, _Args) ->
-  _ = random:seed(erlang:system_time(micro_seconds)),
-  ok.
+  tempfile_sup:start_link().
 
 stop(_State) ->
   ok.

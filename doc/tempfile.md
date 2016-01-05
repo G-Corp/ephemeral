@@ -5,11 +5,13 @@
 * [Function Index](#index)
 * [Function Details](#functions)
 
-Copyright (c) 2014 Finexkap
+Copyright (c) 2014 Finexkap, 2016 BotsUnit
 
 Erlang module for managing temporary files
 
-__Authors:__ Gregoire Lejeune ([`gl@finexkap.com`](mailto:gl@finexkap.com)).
+__Behaviours:__ [`gen_server`](gen_server.md).
+
+__Authors:__ Gregoire Lejeune ([`gl@finexkap.com`](mailto:gl@finexkap.com)), Grégoire Lejeune ([`gregoire.lejeune@botsunit.com`](mailto:gregoire.lejeune@botsunit.com)).
 
 <a name="types"></a>
 
