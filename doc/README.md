@@ -2,7 +2,7 @@
 
 # Erlang module for managing temporary files #
 
-Copyright (c) 2014, 2015 Finexkap, 2015, 2016 Bots Unit
+Copyright (c) 2014, 2015 Finexkap, 2015 Bots Unit
 
 __Authors:__ Gregoire Lejeune ([`gregoire.lejeune@finexkap.com`](mailto:gregoire.lejeune@finexkap.com)), Gregoire Lejeune ([`gregoire.lejeune@botsunit.com`](mailto:gregoire.lejeune@botsunit.com)), Mathias Franck ([`mathias.franck@botsunit.com`](mailto:mathias.franck@botsunit.com)).
 
@@ -23,7 +23,7 @@ __Authors:__ Gregoire Lejeune ([`gregoire.lejeune@finexkap.com`](mailto:gregoire
 kafe is available for use under the following license, commonly known as the 3-clause (or "modified") BSD license:
 
 Copyright (c) 2014, 2015 Finexkap<br />
-Copyright (c) 2015, 2016 Bots Unit<br />
+Copyright (c) 2015, Bots Unit<br />
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
@@ -40,5 +40,6 @@ THIS SOFTWARE IS PROVIDED BY THE AUTHOR `AS IS` AND ANY EXPRESS OR IMPLIED WARRA
 <table width="100%" border="0" summary="list of modules">
 <tr><td><a href="ostemp.md" class="module">ostemp</a></td></tr>
 <tr><td><a href="tempdir.md" class="module">tempdir</a></td></tr>
-<tr><td><a href="tempfile.md" class="module">tempfile</a></td></tr></table>
+<tr><td><a href="tempfile.md" class="module">tempfile</a></td></tr>
+<tr><td><a href="tempfile_app.md" class="module">tempfile_app</a></td></tr></table>
 
