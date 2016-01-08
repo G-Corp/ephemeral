@@ -13,3 +13,4 @@ erl_crash.dump
 ext
 .erlang.mk
 tempfile.d
+test/TEST-*.xml

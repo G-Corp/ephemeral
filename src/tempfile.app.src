@@ -6,8 +6,8 @@
   {modules, []},
   {applications, [
                   kernel,
-                  stdlib
+                  stdlib,
+                  bucs
                  ]},
-  {env, []},
-  {mod, {tempfile_app, []}}
+  {env, []}
  ]}.

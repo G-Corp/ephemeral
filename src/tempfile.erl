@@ -46,5 +46,5 @@ name(Prefix, Options) ->
           Ext2 -> [$.|Ext2]
         end,
   Path = maps:get(path, Options1, ostemp:dir()),
-  filename:join([Path, Prefix ++ temp_utils:randstr(20) ++ Ext]).
+  filename:join([Path, Prefix ++ bucrandom:randstr(20) ++ Ext]).
 

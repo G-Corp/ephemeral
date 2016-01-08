@@ -21,7 +21,6 @@ t_name() ->
   ?assertMatch("tata", filename:dirname(DirPath)),
   ?assertMatch({match, _}, re:run(filename:basename(DirPath), "^tutu.{20}\\.toto$")).
 
-
 build_sample(0) ->
   [];
 build_sample(N) ->
