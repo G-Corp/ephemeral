@@ -1,5 +1,12 @@
 PROJECT = tempfile
 
+DEP_PLUGINS = mix.mk
+BUILD_DEPS = mix.mk
+ELIXIR_VERSION = ~> 1.2
+ELIXIR_BINDINGS = ostemp tempdir tempfile
+
+dep_mix.mk = git https://github.com/botsunit/mix.mk.git master
+
 DEPS = bucs
 dep_bucs = git https://github.com/botsunit/bucs.git master
 
@@ -20,4 +27,6 @@ EUNIT_OPTS = verbose, {report, {eunit_surefire, [{dir, "test"}]}}
 
 dev: deps app
 	@erl -pa ebin include deps/*/ebin deps/*/include
+
+release: app mix.all
 
