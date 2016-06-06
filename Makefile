@@ -1,31 +1,23 @@
-PROJECT = tempfile
+include bu.mk
 
-DEP_PLUGINS = mix.mk
-BUILD_DEPS = mix.mk
-ELIXIR_VERSION = ~> 1.2
-ELIXIR_BINDINGS = ostemp tempdir tempfile
-dep_mix.mk = git https://github.com/botsunit/mix.mk.git master
+.PHONY: doc docker-compose.yml
+REBAR = ./rebar3
 
-DEPS = bucs
-dep_bucs = git https://github.com/botsunit/bucs.git 0.0.1
+compile:
+	$(verbose) $(REBAR) compile
 
-DOC_DEPS = edown
-dep_edown = git https://github.com/botsunit/edown.git master
+tests:
+	$(verbose) $(REBAR) eunit
 
-include erlang.mk
+doc:
+	$(verbose) $(REBAR) as doc edoc
 
-EDOC_OPTS = {doclet, edown_doclet} \
-						, {app_default, "http://www.erlang.org/doc/man"} \
-						, {source_path, ["src"]} \
-						, {overview, "overview.edoc"} \
-						, {stylesheet, ""} \
-						, {image, ""} \
-						, {top_level_readme, {"./README.md", "https://github.com/botsunit/tempfile"}}
+elixir:
+	$(verbose) $(REBAR) elixir generate_mix
+	$(verbose) $(REBAR) elixir generate_lib
 
-EUNIT_OPTS = verbose, {report, {eunit_surefire, [{dir, "test"}]}}
+dist: compile tests elixir doc
 
-dev: deps app
-	@erl -pa ebin include deps/*/ebin deps/*/include
-
-release: app mix.all
+distclean:
+	$(verbose) rm -rf _build rebar.lock mix.lock test/eunit deps
 
