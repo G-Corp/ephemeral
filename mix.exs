@@ -4,7 +4,7 @@ defmodule Tempfile.Mixfile do
   def project do
     [
       app: :tempfile,
-      version: "1.0.2",
+      version: "1.1.0",
       elixir: "~> 1.2",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
@@ -14,14 +14,14 @@ defmodule Tempfile.Mixfile do
 
   def application do
     [
-       applications: [:kernel, :stdlib, :bucs],
+       applications: [:bucs],
        env: []
     ]
   end
 
   defp deps do
     [
-      {:bucs, git: "https://github.com/botsunit/bucs.git", branch: "master"}    
+      {:bucs, git: "https://github.com/botsunit/bucs.git", tag: "0.0.2"}    
     ]
   end
 end
