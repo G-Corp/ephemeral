@@ -1,7 +1,5 @@
+.PHONY: doc
 include bu.mk
-
-.PHONY: doc docker-compose.yml
-REBAR = ./rebar3
 
 compile:
 	$(verbose) $(REBAR) compile
