@@ -7,7 +7,7 @@ tempdir_test_() ->
    fun setup/0, fun teardown/1,
    [
     ?_test(t_name())
-    ,?_test(t_mktmp())
+    , ?_test(t_mktmp())
    ]}.
 
 setup() ->

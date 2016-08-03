@@ -12,14 +12,14 @@
         ]).
 
 % @doc
-% Returns a writable temporary directory. 
+% Returns a writable temporary directory.
 %
 % Searches for directories in the following order:
 %
-% 1. the directory named by the <code>TMPDIR</code> environment variable 
-% 2. the directory named by the <code>TEMP</code> environment variable 
-% 3. the directory named by the <code>TMP</code> environment variable 
-% 4. <code>C:\TMP</code> on Windows or <code>/tmp</code> on Unix 
+% 1. the directory named by the <code>TMPDIR</code> environment variable
+% 2. the directory named by the <code>TEMP</code> environment variable
+% 3. the directory named by the <code>TMP</code> environment variable
+% 4. <code>C:\TMP</code> on Windows or <code>/tmp</code> on Unix
 % 5. as a last resort, the current working directory
 %
 % Returns <code>false</code> if none of the above are writable
@@ -27,13 +27,13 @@
 -spec dir() -> string() | false.
 dir() ->
   case os:getenv("TMPDIR") of
-    false -> 
+    false ->
       case os:getenv("TEMP") of
-        false -> 
+        false ->
           case os:getenv("TMP") of
-            false -> 
+            false ->
               case write_tmp_dir("/tmp") of
-                false -> 
+                false ->
                   Cwd = case file:get_cwd() of
                           {ok, Dir} -> Dir;
                           _ -> "."
