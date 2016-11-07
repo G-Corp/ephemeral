@@ -22,7 +22,7 @@ defmodule Tempfile.Mixfile do
 
   defp deps do
     [
-      {:bucs, "~> 0.1.9"}    
+      {:bucs, "~> 1.0.0"}    
     ]
   end
 
