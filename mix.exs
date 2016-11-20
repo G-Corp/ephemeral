@@ -1,9 +1,9 @@
-defmodule Tempfile.Mixfile do
+defmodule Ephemeral.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :tempfile,
+      app: :ephemeral,
       version: "1.1.6",
       elixir: "~> 1.2",
       build_embedded: Mix.env == :prod,
@@ -22,7 +22,7 @@ defmodule Tempfile.Mixfile do
 
   defp deps do
     [
-      {:bucs, "~> 1.0.0"}    
+      {:bucs, "~> 1.0.1"}    
     ]
   end
 
