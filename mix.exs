@@ -4,7 +4,7 @@ defmodule Ephemeral.Mixfile do
   def project do
     [
       app: :ephemeral,
-      version: "1.1.6",
+      version: "2.0.0",
       elixir: "~> 1.2",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
