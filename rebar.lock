@@ -1,6 +1,6 @@
 {"1.1.0",
-[{<<"bucs">>,{pkg,<<"bucs">>,<<"1.0.1">>},0}]}.
+[{<<"bucs">>,{pkg,<<"bucs">>,<<"1.0.2">>},0}]}.
 [
 {pkg_hash,[
- {<<"bucs">>, <<"5AE078EF6E40D688406F64D5B0DFCCAEEBFE403875A6941F50E34D287FCEC3EE">>}]}
+ {<<"bucs">>, <<"25899B634BE754239A1D6D1A7AD30B6B0DDD2EADFC75C71D52E20AB922A6FFCC">>}]}
 ].
