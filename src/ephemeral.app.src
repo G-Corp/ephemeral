@@ -13,7 +13,7 @@
 
   , {maintainers, ["Gregoire Lejeune"]}
   , {licenses, ["BSD-3"]}
-  , {links, [{"Github", "https://github.com/botsunit/bank"}]}
+  , {links, [{"Github", "https://github.com/botsunit/tempfile"}]}
   , {files, ["src/*"
              , "include/*"
              , "lib/*"
