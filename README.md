@@ -24,6 +24,7 @@ kafe is available for use under the following license, commonly known as the 3-c
 
 Copyright (c) 2014, 2015 Finexkap<br />
 Copyright (c) 2015, 2016 Bots Unit<br />
+Copyright (c) 2017 G-Corp<br />
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
@@ -38,7 +39,7 @@ THIS SOFTWARE IS PROVIDED BY THE AUTHOR `AS IS` AND ANY EXPRESS OR IMPLIED WARRA
 
 
 <table width="100%" border="0" summary="list of modules">
-<tr><td><a href="https://github.com/botsunit/tempfile/blob/master/doc/ostemp.md" class="module">ostemp</a></td></tr>
-<tr><td><a href="https://github.com/botsunit/tempfile/blob/master/doc/tempdir.md" class="module">tempdir</a></td></tr>
-<tr><td><a href="https://github.com/botsunit/tempfile/blob/master/doc/tempfile.md" class="module">tempfile</a></td></tr></table>
+<tr><td><a href="https://github.com/G-Corp/ephemeral/blob/master/doc/ostemp.md" class="module">ostemp</a></td></tr>
+<tr><td><a href="https://github.com/G-Corp/ephemeral/blob/master/doc/tempdir.md" class="module">tempdir</a></td></tr>
+<tr><td><a href="https://github.com/G-Corp/ephemeral/blob/master/doc/tempfile.md" class="module">tempfile</a></td></tr></table>
 

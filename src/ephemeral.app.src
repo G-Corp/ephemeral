@@ -13,7 +13,7 @@
 
   , {maintainers, ["Gregoire Lejeune"]}
   , {licenses, ["BSD-3"]}
-  , {links, [{"Github", "https://github.com/botsunit/tempfile"}]}
+  , {links, [{"Github", "https://github.com/G-Corp/ephemeral"}]}
   , {files, ["src/*"
              , "include/*"
              , "lib/*"
