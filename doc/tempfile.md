@@ -61,7 +61,7 @@ Equivalent to [`name(Prefix, [])`](#name-2).
 ### name/2 ###
 
 <pre><code>
-name(Prefix::string(), Options::<a href="#type-tmpname_options">tmpname_options()</a>) -&gt; string()
+name(Prefix::string() | binary(), Options::<a href="#type-tmpname_options">tmpname_options()</a>) -&gt; string() | binary()
 </code></pre>
 <br />
 

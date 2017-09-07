@@ -18,11 +18,31 @@ __Authors:__ Gregoire Lejeune ([`gl@finexkap.com`](mailto:gl@finexkap.com)).
 
 
 
+### <a name="type-mktmp_option">mktmp_option()</a> ###
+
+
+<pre><code>
+mktmp_option() = {prefix, string() | binary()} | {path, string() | binary()} | {remove, true | false}
+</code></pre>
+
+
+
+
+### <a name="type-mktmp_options">mktmp_options()</a> ###
+
+
+<pre><code>
+mktmp_options() = [<a href="#type-mktmp_option">mktmp_option()</a>]
+</code></pre>
+
+
+
+
 ### <a name="type-tmpname_option">tmpname_option()</a> ###
 
 
 <pre><code>
-tmpname_option() = {prefix, string()} | {path, string()}
+tmpname_option() = {prefix, string() | binary()} | {path, string() | binary()}
 </code></pre>
 
 
@@ -61,7 +81,10 @@ Equivalent to [`mktmp([], Fun)`](#mktmp-2).
 
 ### mktmp/2 ###
 
-`mktmp(Options, Fun) -> any()`
+<pre><code>
+mktmp(Options::<a href="#type-mktmp_options">mktmp_options()</a>, Fun::fun((string() | binary()) -&gt; term())) -&gt; term() | {error, term()}
+</code></pre>
+<br />
 
 
 Create a temporary directory

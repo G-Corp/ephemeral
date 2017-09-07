@@ -38,15 +38,17 @@ name(Prefix) ->
 % "./prefix_Sa7BFnEzS6h862jmXQdy.toto"
 % </pre>
 % @end
--spec name(string(), tmpname_options()) -> string().
-name(Prefix, Options) ->
+-spec name(string() | binary(), tmpname_options()) -> string() | binary().
+name(Prefix, Options) when is_list(Prefix) ->
   Options1 = maps:from_list(Options),
-  Ext = case maps:get(ext, Options1, ".tmp") of
+  Ext = case bucs:to_string(maps:get(ext, Options1, ".tmp")) of
           [] -> "";
           [$.] -> "";
           [$.|_] = Ext1 -> Ext1;
           Ext2 -> [$.|Ext2]
         end,
-  Path = maps:get(path, Options1, ostemp:dir()),
-  filename:join([Path, Prefix ++ bucrandom:randstr(20) ++ Ext]).
+  Path = bucs:to_string(maps:get(path, Options1, ostemp:dir())),
+  filename:join([Path, Prefix ++ bucrandom:randstr(20) ++ Ext]);
+name(Prefix, Options) when is_binary(Prefix) ->
+  bucs:to_binary(name(bucs:to_string(Prefix), Options)).
 
