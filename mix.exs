@@ -22,7 +22,7 @@ defmodule Ephemeral.Mixfile do
 
   defp deps do
     [
-      {:bucs, "~> 1.0.11"}
+      {:bucs, "~> 1.0.12"}
     ]
   end
 
