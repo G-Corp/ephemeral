@@ -1,3 +1,7 @@
+# File: mix.exs
+# This file was generated from rebar.config
+# Using rebar3_elixir (https://github.com/G-Corp/rebar3_elixir)
+# MODIFY IT AT YOUR OWN RISK AND ONLY IF YOU KNOW WHAT YOU ARE DOING!
 defmodule Ephemeral.Mixfile do
   use Mix.Project
 
@@ -22,7 +26,7 @@ defmodule Ephemeral.Mixfile do
 
   defp deps do
     [
-      {:bucs, "~> 1.0.12"}
+      {:bucs, git: "git://github.com/G-Corp/bucs.git", branch: "master"}
     ]
   end
 
@@ -61,9 +65,9 @@ defmodule Ephemeral.Mixfile do
 
   defp trim(x) do
     if Version.compare(System.version, "1.5.0") == :lt do
-      String.strip(x)
+      Kernel.apply(String, :strip, [x])
     else
-      String.trim(x)
+      Kernel.apply(String, :trim, [x])
     end
   end
 end

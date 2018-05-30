@@ -1,1 +1,3 @@
-%{"bucs": {:hex, :bucs, "1.0.12", "61d5aaa41e501c5f1567bc9dbc477f2f140bffc46abc1c0e5a0bec8c65ec1493", [], [], "hexpm"}}
+%{
+  "bucs": {:git, "git://github.com/G-Corp/bucs.git", "042a7144b6729579c2d1a85eba475cbd70719484", [branch: "master"]},
+}
